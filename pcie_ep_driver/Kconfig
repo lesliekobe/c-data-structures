@@ -1,0 +1,21 @@
+# Kconfig for Xilinx PCIe EP driver
+
+config XILINX_PCIE_EP
+    tristate "Xilinx Spartan-6 PCIe Endpoint support"
+    depends on PCI
+    help
+      This driver supports Xilinx Spartan-6 FPGA integrated PCIe
+      Endpoint block devices.
+
+      If you have a Xilinx FPGA development board (e.g., SP605, ML605)
+      with PCIe Endpoint design, say Y.
+
+      To compile this driver as a module, choose M here.
+
+config XILINX_PCIE_EP_DEBUG
+    bool "Xilinx PCIe EP debug messages"
+    depends on XILINX_PCIE_EP
+    help
+      Enable debug output in the Xilinx PCIe EP driver.
+
+      Say N unless you are debugging the driver.
