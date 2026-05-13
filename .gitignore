@@ -1,0 +1,4 @@
+.openclaw/
+*.exe
+test.exe
+.vs/
